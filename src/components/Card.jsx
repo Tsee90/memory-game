@@ -11,6 +11,9 @@ export function Card({ pokemon }) {
       .then((response) => {
         const imgSrc = response.sprites.other['official-artwork'].front_default;
         setSrc(imgSrc);
+      })
+      .catch(() => {
+        setSrc(null);
       });
   }, [pokemon]);
 
@@ -22,12 +25,13 @@ export function Card({ pokemon }) {
         const flavorText = response.flavor_text_entries[0].flavor_text;
         const descriptionText = flavorText.replace(/[\n\f]/g, ' ');
         setDescription(descriptionText);
-      });
+      })
+      .catch(() => setDescription(null));
   });
-  return (
+  return src && description ? (
     <div>
       <img src={src}></img>
       <div>{description}</div>
     </div>
-  );
+  ) : null;
 }
