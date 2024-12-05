@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { Card } from './components/Card';
 
 import './App.css';
 
 function App() {
-  return <div></div>;
+  return <Card pokemon={'charizard'}></Card>;
 }
 
 export default App;
