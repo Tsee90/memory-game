@@ -4,7 +4,7 @@ import { Card } from './components/Card';
 import './App.css';
 
 function App() {
-  return <Card pokemon={'charizard'}></Card>;
+  return <Card pokemon={'beautifly'}></Card>;
 }
 
 export default App;
