@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/card.css';
 
-export function Card({ pokemon }) {
+export function Card({ pokemon, onClick }) {
   const [src, setSrc] = useState('');
   const [description, setDescription] = useState('');
   const [color, setColor] = useState('');
@@ -37,7 +37,11 @@ export function Card({ pokemon }) {
       .catch(() => setDescription(null));
   });
   return src && description ? (
-    <div className="card-wrapper" style={{ backgroundColor: color }}>
+    <div
+      className="card-wrapper"
+      style={{ backgroundColor: color }}
+      onClick={onClick}
+    >
       <div className="card">
         <div className="card-name">{capitalizeFirstLetter(pokemon)}</div>
         <img src={src} className="card-image"></img>

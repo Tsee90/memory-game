@@ -7,6 +7,10 @@
   background-size: 50% 50%;
 }
 
+.card-wrapper:hover {
+  cursor: pointer;
+}
+
 .card {
   display: flex;
   flex-direction: column;
