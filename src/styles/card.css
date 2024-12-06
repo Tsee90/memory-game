@@ -10,7 +10,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 375px;
   width: 200px;
   gap: 10px;
   padding: 1em 1.5em;
@@ -23,8 +23,9 @@
 }
 
 .card-image {
-  background-color: white;
+  background-image: url('../assets/holo.jpg');
   border: 5px solid gold;
+  background-size: cover;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
