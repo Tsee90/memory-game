@@ -55,7 +55,7 @@ export function Game() {
       <div className="header">
         <div className="title-container">
           <div className="title">Memory Game</div>
-          <div className="subtitle">Don't click the same card twice!</div>
+          <div className="subtitle">Don&apos;t click the same card twice!</div>
         </div>
         <div className="score-container">
           <div className="count">Count: {count}</div>
